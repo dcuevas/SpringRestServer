@@ -22,8 +22,6 @@ import com.dariocuevas.usersws.service.UserService;
 @RequestMapping("/users")
 public class UserController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
-	
 	private UserService userService;
 	
 	@Inject
@@ -34,8 +32,6 @@ public class UserController {
 	@RequestMapping(value="/{id}", method=RequestMethod.GET,
 					headers = {"Accept=text/xml, application/json"})
 	public @ResponseBody User getUser(@PathVariable("id") Long id) {
-		logger.info("Looking for user: " + id);
-		
 		return userService.getUser(id);
 	}
 	

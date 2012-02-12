@@ -105,7 +105,6 @@
 					<artifactId>jmxri</artifactId>
 				</exclusion>
 			</exclusions>
-			<scope>runtime</scope>
 		</dependency>
 
 		<!-- @Inject -->
@@ -174,6 +173,23 @@
 						<version>2.6.0-01</version>
 					</dependency>
 				</dependencies>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>aspectj-maven-plugin</artifactId>
+				<executions>
+					<execution>
+				  		<goals>
+				   			<goal>compile</goal>      
+				   			<goal>test-compile</goal> 
+				  		</goals>
+				  		<configuration>
+							<source>${java-version}</source>
+							<target>${java-version}</target>
+				  		</configuration>
+				 	</execution>
+				</executions>
 			</plugin>
 			
 			<plugin>

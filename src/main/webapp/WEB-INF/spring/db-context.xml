@@ -10,9 +10,9 @@
 			<!--   <property name="url"
 			            value="jdbc:mysql://mysql-dariocuevas.jelastic.com/userWs" /> -->
 			  <property name="url"
-			            value="jdbc:mysql://127.0.0.1:3306/userWs" />       
-			  <property name="username" value="userWs" />
-			  <property name="password" value="Malaga1" />
+			            value="${dataSource.url}" />       
+			  <property name="username" value="${dataSource.username}" />
+			  <property name="password" value="${dataSource.password}" />
 			  <property name="initialSize" value="5" />
 			  <property name="maxActive" value="10" />
 	</bean>
