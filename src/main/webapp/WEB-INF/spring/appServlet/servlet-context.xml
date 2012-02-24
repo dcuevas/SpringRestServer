@@ -21,7 +21,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.dariocuevas.usersws.controller" />
+	<context:component-scan base-package="com.dariocuevas.restServer.controller" />
 	
 	<beans:bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		<beans:property name="mediaTypes">

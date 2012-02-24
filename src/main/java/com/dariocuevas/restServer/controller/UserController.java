@@ -1,10 +1,8 @@
-package com.dariocuevas.usersws.controller;
+package com.dariocuevas.restServer.controller;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletResponse;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,8 +13,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 
-import com.dariocuevas.usersws.model.User;
-import com.dariocuevas.usersws.service.UserService;
+import com.dariocuevas.restServer.model.User;
+import com.dariocuevas.restServer.service.UserService;
 
 @Controller
 @RequestMapping("/users")

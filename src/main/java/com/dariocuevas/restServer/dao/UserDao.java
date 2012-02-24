@@ -1,6 +1,6 @@
-package com.dariocuevas.usersws.dao;
+package com.dariocuevas.restServer.dao;
 
-import com.dariocuevas.usersws.model.User;
+import com.dariocuevas.restServer.model.User;
 
 public interface UserDao {
 	

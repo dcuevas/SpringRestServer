@@ -21,7 +21,7 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="packagesToScan">
 			<list>
-		        <value>com.dariocuevas.usersws.model</value>
+		        <value>com.dariocuevas.restServer.model</value>
 		   	</list>
 		</property>
   		<property name="hibernateProperties">

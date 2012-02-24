@@ -1,4 +1,4 @@
-package com.dariocuevas.usersws.dao;
+package com.dariocuevas.restServer.dao;
 
 import javax.inject.Inject;
 
@@ -6,7 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-import com.dariocuevas.usersws.model.User;
+import com.dariocuevas.restServer.model.User;
 
 @Repository
 public class HibernateUserDao implements UserDao {

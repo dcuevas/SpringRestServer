@@ -1,4 +1,4 @@
-package com.dariocuevas.usersws.aop;
+package com.dariocuevas.restServer.aop;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,13 +15,13 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class TraceAspect {
 	
-	@Pointcut("execution(* com.dariocuevas.usersws.dao..*.*(..))")
+	@Pointcut("execution(* com.dariocuevas.restServer.dao..*.*(..))")
 	public void daoOp() {};
 	
-	@Pointcut("execution(* com.dariocuevas.usersws.controller..*.*(..))")
+	@Pointcut("execution(* com.dariocuevas.restServer.controller..*.*(..))")
 	public void controllerOp() {};
 	
-	@Pointcut("execution(* com.dariocuevas.usersws.service..*.*(..))")
+	@Pointcut("execution(* com.dariocuevas.restServer.service..*.*(..))")
 	public void serviceOp() {};
 	
 	@Before("(daoOp() || controllerOp() || serviceOp()) && target(object)")

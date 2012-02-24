@@ -1,11 +1,11 @@
-package com.dariocuevas.usersws.service;
+package com.dariocuevas.restServer.service;
 
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 
-import com.dariocuevas.usersws.dao.UserDao;
-import com.dariocuevas.usersws.model.User;
+import com.dariocuevas.restServer.dao.UserDao;
+import com.dariocuevas.restServer.model.User;
 
 @Service
 public class DefaultUserService implements UserService {

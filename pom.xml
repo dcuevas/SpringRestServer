@@ -3,8 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.dariocuevas</groupId>
-	<artifactId>usersws</artifactId>
-	<name>abc</name>
+	<artifactId>usersRestServer</artifactId>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -13,6 +12,24 @@
 		<org.aspectj-version>1.6.9</org.aspectj-version>
 		<org.slf4j-version>1.5.10</org.slf4j-version>
 	</properties>
+	
+	<pluginRepositories>
+    	<pluginRepository>
+         	<snapshots>
+            	<enabled>false</enabled>
+          	</snapshots>
+          	<id>central</id>
+          	<name>plugins-release</name>
+          	<url>http://repo.jelastic.com:8081/plugins-release</url>
+     	</pluginRepository>
+      	<pluginRepository>
+         	<snapshots/>
+          	<id>snapshots</id>
+          	<name>plugins-snapshot</name>
+          	<url>http://repo.jelastic.com:8081/plugins-snapshot</url>
+      	</pluginRepository>
+  	</pluginRepositories>
+  	
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -63,8 +80,7 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>3.6.9.Final</version>
 		</dependency>
-            
-		
+	
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -148,7 +164,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.7</version>
+			<version>4.8.1</version>
 			<scope>test</scope>
 		</dependency>        
 	</dependencies>
@@ -195,9 +211,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-					<warName>abc</warName>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -219,6 +232,18 @@
 				<configuration>
 					<encoding>UTF-8</encoding>
 				</configuration>
+			</plugin>
+			<plugin>
+			 	<groupId>com.jelastic</groupId>
+			  	<artifactId>jelastic-maven-plugin</artifactId>
+			  	<version>1.7-SNAPSHOT</version>
+			  	<configuration>
+			    	<email>xx</email>
+			     	<password>xx</password>
+			     	<context>userRestServer</context>
+			     	<environment>dariocuevas</environment>
+			     	<api_hoster>api.jelastic.com</api_hoster>
+			  	</configuration>
 			</plugin>
 		</plugins>
 	</build>

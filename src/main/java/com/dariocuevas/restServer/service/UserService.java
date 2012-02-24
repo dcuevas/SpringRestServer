@@ -1,6 +1,6 @@
-package com.dariocuevas.usersws.service;
+package com.dariocuevas.restServer.service;
 
-import com.dariocuevas.usersws.model.User;
+import com.dariocuevas.restServer.model.User;
 
 public interface UserService {
 	
